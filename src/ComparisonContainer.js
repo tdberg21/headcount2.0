@@ -5,9 +5,7 @@ const districts = new DistrictRepository();
 
 const ComparisonContainer = ( { cardArray } ) => {
   if(cardArray.length === 0) {
-    return (
-      <div> Compare Districts by Clicking on 2 Cards</div>
-    )
+    return (<div></div>)
   }
   if(cardArray.length > 0) {
     var newCards = cardArray.map(location => {
@@ -28,23 +26,30 @@ const ComparisonContainer = ( { cardArray } ) => {
                   </div>)
         })
         return cardData
-
     })
 
     if(cardArray.length === 1) {
       return (<div className="comp-container"> {newCards} </div>)
     } 
     if(cardArray.length === 2) {
-    const displayAvgs = newCards.map( obj => obj[0].props.children[2])
-    const totalAvg = displayAvgs.reduce(( sum, num ) => {
-      return sum / num.props.children[1]
-    }, 1)
+      const displayAvgs = cardArray.reduce((accu, district) => {
+        const title = Object.keys(district)
+        return accu.concat(title)
+      }, [])
+      const finalResult = districts.compareDistrictAverages(displayAvgs[0], displayAvgs[1])
+      const displayResult = Object.values(finalResult)
+      const displayInfo = Object.keys(finalResult)
       return (<div className="comp-container">
                 <div> {newCards[0]}</div>
-                <div className="total-card">{displayAvgs} averages to: {Number(parseFloat(totalAvg).toFixed(2))/2}</div>
+                <div className="total-card">
+                  <h5>{displayInfo[0]}: {displayResult[0]}</h5>
+                  <h5>{displayInfo[1]}: {displayResult[1]}</h5>
+                  <h4>{displayInfo[2]}: {displayResult[2]}</h4>
+                </div>
                 <div> {newCards[1]}</div>
               </div>
         )
+    
     }
   }
 

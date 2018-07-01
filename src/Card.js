@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Card = ({ title, content, cardAverage, value, updateClickedCard, highlight }) => {
+const Card = ({ title, content, updateClickedCard }) => {
   const cardData =
 
     Object.keys(content).map((year, index) => {
@@ -13,7 +13,6 @@ const Card = ({ title, content, cardAverage, value, updateClickedCard, highlight
 
   return(
     <div  className="Card" 
-          value={value}
           onClick={() => updateClickedCard(title, content)}>
       <h3>{title}</h3>
       <ul>{cardData}</ul>
@@ -23,7 +22,8 @@ const Card = ({ title, content, cardAverage, value, updateClickedCard, highlight
 
 Card.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.object
+  content: PropTypes.object,
+  updateClickedCard: PropTypes.func
 }
 
 export default Card;

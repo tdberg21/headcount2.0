@@ -20,7 +20,9 @@ const CardContainer = ({ cards, cardAverage, updateClickedCard , highlight}) => 
 }
 
 CardContainer.propTypes = {
-  cards: PropTypes.object
+  cards: PropTypes.object,
+  cardAverage: PropTypes.func,
+  updateClickedCard: PropTypes.func
 }
 
 export default CardContainer;

@@ -1,6 +1,8 @@
 import React from 'react';
 import './ComparisonContainer.css';
 import DistrictRepository from './helper.js';
+import PropTypes from 'prop-types';
+
 const districts = new DistrictRepository();
 
 const ComparisonContainer = ( { cardArray } ) => {
@@ -14,7 +16,7 @@ const ComparisonContainer = ( { cardArray } ) => {
           var districtAvg = districts.findAverage(district)
           const dataArray = Object.keys(location[district]).map(year => {
             const toggle = location[district][year] <= .5 ? 'low' : 'high'
-            return (<aside key={index}
+            return (<aside key={Math.floor(Math.random() * 100000)}
                            className={toggle}> {year}: {location[district][year]} 
                     </aside>)
           })
@@ -52,12 +54,10 @@ const ComparisonContainer = ( { cardArray } ) => {
     
     }
   }
-
-
-
-
 }
 
-
+ComparisonContainer.propTypes = {
+  cardArray: PropTypes.array
+}
 
 export default ComparisonContainer;

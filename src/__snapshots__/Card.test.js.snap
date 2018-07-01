@@ -21,6 +21,7 @@ ShallowWrapper {
           }
     }
     title="ACADEMY 20"
+    updateClickedCard={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -142,7 +143,6 @@ ShallowWrapper {
       ],
       "className": "Card",
       "onClick": [Function],
-      "value": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -650,7 +650,6 @@ ShallowWrapper {
         ],
         "className": "Card",
         "onClick": [Function],
-        "value": undefined,
       },
       "ref": null,
       "rendered": Array [

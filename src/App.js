@@ -46,7 +46,7 @@ render() {
         <h1>Welcome To Headcount 2.0</h1>
         <SearchForm updateDistricts={this.updateDistricts}/>
       </header>
-      <ComparisonContainer cardArray={this.state.clickedCards}/>
+      <ComparisonContainer cardsToCompare={this.state.clickedCards}/>
       <CardContainer 
         cards={this.state.cards}
         updateClickedCard={this.updateClickedCard}

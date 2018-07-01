@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 
 const districts = new DistrictRepository();
 
-const ComparisonContainer = ( { cardArray } ) => {
-  if (cardArray.length === 0) {
+const ComparisonContainer = ( { cardsToCompare } ) => {
+  if (cardsToCompare.length === 0) {
     return (<div></div>);
   }
-  if (cardArray.length > 0) {
-    var newCards = cardArray.map((location) => {
+  if (cardsToCompare.length > 0) {
+    var newCards = cardsToCompare.map((location) => {
       const cardData =
         Object.keys(location).map((district, index) => { 
           var districtAvg = districts.findAverage(district);
@@ -32,11 +32,11 @@ const ComparisonContainer = ( { cardArray } ) => {
       return cardData;
     });
 
-    if (cardArray.length === 1) {
+    if (cardsToCompare.length === 1) {
       return (<div className="comp-container"> {newCards} </div>);
     } 
-    if (cardArray.length === 2) {
-      const displayAvgs = cardArray.reduce((accu, district) => {
+    if (cardsToCompare.length === 2) {
+      const displayAvgs = cardsToCompare.reduce((accu, district) => {
         const title = Object.keys(district);
         return accu.concat(title);
       }, []);
@@ -60,7 +60,7 @@ const ComparisonContainer = ( { cardArray } ) => {
 };
 
 ComparisonContainer.propTypes = {
-  cardArray: PropTypes.array
+  cardsToCompare: PropTypes.array
 };
 
 export default ComparisonContainer;

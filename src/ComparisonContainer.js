@@ -1,6 +1,8 @@
 import React from 'react';
 import './ComparisonContainer.css';
 import DistrictRepository from './helper.js';
+import PropTypes from 'prop-types';
+
 const districts = new DistrictRepository();
 
 const ComparisonContainer = ( { cardArray } ) => {
@@ -8,18 +10,18 @@ const ComparisonContainer = ( { cardArray } ) => {
     return (<div></div>)
   }
   if(cardArray.length > 0) {
-    var newCards = cardArray.map(location => {
+    var newCards = cardArray.map((location, index) => {
       const cardData =
-        Object.keys(location).map(district => { 
+        Object.keys(location).map((district, index) => { 
           var districtAvg = districts.findAverage(district)
           const dataArray = Object.keys(location[district]).map(year => {
             const toggle = location[district][year] <= .5 ? 'low' : 'high'
-            return (<aside key={Math.random() * 10}
+            return (<aside key={Math.floor(Math.random() * 100000)}
                            className={toggle}> {year}: {location[district][year]} 
                     </aside>)
           })
           return (<div  className="comp-card" 
-                        key={Math.floor(Math.random*100)}>
+                        key={index}>
                   <h3>{district}</h3>
                   <ul>{dataArray}</ul>
                   <h4>Average: {districtAvg}</h4>
@@ -52,12 +54,10 @@ const ComparisonContainer = ( { cardArray } ) => {
     
     }
   }
-
-
-
-
 }
 
-
+ComparisonContainer.propTypes = {
+  cardArray: PropTypes.array
+}
 
 export default ComparisonContainer;

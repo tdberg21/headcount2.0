@@ -83,3 +83,19 @@ header button {
 .high {
   color: #FFA500;
 }
+
+@media screen and (max-width: 400px) {
+
+  .App{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 10% 60%;
+  }
+
+  header{
+    font-size: small;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+}

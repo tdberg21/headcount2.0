@@ -16,9 +16,13 @@ This application was built using the `create-react-app` boilerplate.
 * Write meaningful, comprehensive unit and integration tests.
 
 
-### Screen Shot
+### Screen Shots
 
-![alt text](<url> "Headcount landing page screenshot")
+Landing page:
+![alt text](./images/landing-page.png "Headcount landing page screenshot")
+
+Comparing Districts:
+![alt text](./images/comparing-cards.png "Headcount screenshot with districts comparison")
 
 
 ### Wire Frame

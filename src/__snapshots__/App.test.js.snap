@@ -27,7 +27,7 @@ ShallowWrapper {
           />
 </header>,
         <ComparisonContainer
-          cardArray={Array []}
+          cardsToCompare={Array []}
 />,
         <CardContainer
           cards={
@@ -2440,7 +2440,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "cardArray": Array [],
+          "cardsToCompare": Array [],
         },
         "ref": null,
         "rendered": null,
@@ -4831,7 +4831,7 @@ ShallowWrapper {
             />
 </header>,
           <ComparisonContainer
-            cardArray={Array []}
+            cardsToCompare={Array []}
 />,
           <CardContainer
             cards={
@@ -7244,7 +7244,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "cardArray": Array [],
+            "cardsToCompare": Array [],
           },
           "ref": null,
           "rendered": null,

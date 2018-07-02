@@ -9,7 +9,7 @@ header {
   justify-content: space-around;
   font-size: x-large;
   text-align: center;
-  text-shadow: .2rem .2rem .2rem purple;
+  text-shadow: .2rem .2rem .2rem #800080;
   color: yellow;
   height: 30vh;
   width: 100vw;
@@ -30,12 +30,12 @@ header input {
   height: 1.75rem;
   width: 20rem;
   line-height: 2rem;
-  border: .05rem solid orange;
+  border: .05rem solid #FFA500;
   background-color: lightyellow;
 }
 header button {
-  border: .05rem solid orange;
-  color: purple;
+  border: .05rem solid #FFA500;
+  color: #800080;
   height: 2rem;
 }
 
@@ -53,7 +53,7 @@ header button {
 .Card {
   height: 19rem;
   width: 12rem;
-  border: 2px solid purple;
+  border: 2px solid #800080;
   background-color: #fff;
   color: #3E2A35;
   margin: 2rem;
@@ -61,7 +61,7 @@ header button {
 }
 
 .Card:active {
-  border: 2px solid chartreuse;
+  border: 2px solid #FFA500;
 }
 
 .Card h3 {
@@ -77,9 +77,9 @@ header button {
 }
 
 .low {
-  color: purple;
+  color: #800080;
 }
 
 .high {
-  color: orange;
+  color: #FFA500;
 }

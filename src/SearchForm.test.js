@@ -1,15 +1,16 @@
 import SearchForm from './SearchForm.js';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('SearchForm Tests', () => {
 
   it('updates the state of when the input value changes', () => {
     const wrapper = shallow(<SearchForm
       updateDistricts={jest.fn()} />);
-    const mockEvent = { target: { value: 'abc'} }
+    const mockEvent = { target: { value: 'abc'} };
     const expectedState = 'abc' ;
-    wrapper.instance().handleInput(mockEvent)
+
+    wrapper.instance().handleInput(mockEvent);
     expect(wrapper.state().district).toEqual(expectedState);
   });
 
@@ -29,8 +30,8 @@ describe('SearchForm Tests', () => {
 
     wrapper.instance().handleInput(mockTyping);
 
-    expect(wrapper.state('district')).toEqual(expected)
+    expect(wrapper.state('district')).toEqual(expected);
 
-  })
+  });
 
-})
+});

@@ -37,6 +37,7 @@ ShallowWrapper {
                             }
           }
           title="ACADEMY 20"
+          updateClickedCard={undefined}
           value="ACADEMY 20"
 />,
         <Card
@@ -47,6 +48,7 @@ ShallowWrapper {
                             }
           }
           title="TacoLand"
+          updateClickedCard={undefined}
           value="TacoLand"
 />,
       ],
@@ -56,7 +58,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "62.41051927110275",
+        "key": "43.39525843422673",
         "nodeType": "function",
         "props": Object {
           "cardAverage": undefined,
@@ -64,6 +66,7 @@ ShallowWrapper {
             "2004": 0.75,
           },
           "title": "ACADEMY 20",
+          "updateClickedCard": undefined,
           "value": "ACADEMY 20",
         },
         "ref": null,
@@ -72,7 +75,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "83.11725845194053",
+        "key": "39.490891548753694",
         "nodeType": "function",
         "props": Object {
           "cardAverage": undefined,
@@ -80,6 +83,7 @@ ShallowWrapper {
             "2004": 0.75,
           },
           "title": "TacoLand",
+          "updateClickedCard": undefined,
           "value": "TacoLand",
         },
         "ref": null,
@@ -104,6 +108,7 @@ ShallowWrapper {
                                   }
             }
             title="ACADEMY 20"
+            updateClickedCard={undefined}
             value="ACADEMY 20"
 />,
           <Card
@@ -114,6 +119,7 @@ ShallowWrapper {
                                   }
             }
             title="TacoLand"
+            updateClickedCard={undefined}
             value="TacoLand"
 />,
         ],
@@ -123,7 +129,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "62.41051927110275",
+          "key": "43.39525843422673",
           "nodeType": "function",
           "props": Object {
             "cardAverage": undefined,
@@ -131,6 +137,7 @@ ShallowWrapper {
               "2004": 0.75,
             },
             "title": "ACADEMY 20",
+            "updateClickedCard": undefined,
             "value": "ACADEMY 20",
           },
           "ref": null,
@@ -139,7 +146,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "83.11725845194053",
+          "key": "39.490891548753694",
           "nodeType": "function",
           "props": Object {
             "cardAverage": undefined,
@@ -147,6 +154,7 @@ ShallowWrapper {
               "2004": 0.75,
             },
             "title": "TacoLand",
+            "updateClickedCard": undefined,
             "value": "TacoLand",
           },
           "ref": null,

@@ -10,7 +10,7 @@ export default class DistrictRepository {
         [stat.TimeFrame] : Number(parseFloat(stat.Data).toFixed(3)) };
       if (!stats[stat.Location]) {
         stats[stat.Location] = statObj;
-      } 
+      }
       stats[stat.Location] = { ...statObj, ...stats[stat.Location]};
       return stats;
     }, {});

@@ -1,13 +1,18 @@
 import kinderData from './data/kindergartners_in_full_day_program.js';
 
+const numberCleaner = (number) => {
+  if (number === 'N/A' || isNaN(number)) {
+    return 0;
+  } else {
+    return Number(parseFloat(number).toFixed(3));
+  }
+};
+
 export default class DistrictRepository {
   constructor() {
     this.stats = kinderData.reduce((stats, stat) => {
-      if (stat.Data === 'N/A' || isNaN(stat.Data)) {
-        stat.Data = 0;
-      }
       const statObj = { 
-        [stat.TimeFrame] : Number(parseFloat(stat.Data).toFixed(3)) };
+        [stat.TimeFrame] : numberCleaner(stat.Data) };
       if (!stats[stat.Location]) {
         stats[stat.Location] = statObj;
       }
@@ -49,7 +54,7 @@ export default class DistrictRepository {
     const totalVal = statsVals.reduce((sum, num) => {
       return sum += num;
     }, 0);
-    return Number(parseFloat(totalVal/statsVals.length).toFixed(3));
+    return numberCleaner(totalVal/statsVals.length);
   }
 
   compareDistrictAverages = (district1, district2) => {
@@ -58,7 +63,7 @@ export default class DistrictRepository {
     const result = {
       [district1.toUpperCase()]: dist1Ave,
       [district2.toUpperCase()]: dist2Ave,
-      compared: Number(parseFloat(dist1Ave / dist2Ave).toFixed(3))
+      compared: numberCleaner(dist1Ave / dist2Ave)
     };
     return result;
   }

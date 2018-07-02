@@ -25,6 +25,6 @@ Comparing Districts:
 ![alt text](./images/comparing-cards.png "Headcount screenshot with districts comparison")
 
 
-### Wire Frame
-
-![alt text](<url> "Headcount Wire Frame")
+#### Group Members
+LeeLee Graham
+Tory Dannenberg

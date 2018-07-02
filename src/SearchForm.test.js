@@ -14,15 +14,6 @@ describe('SearchForm Tests', () => {
     expect(wrapper.state().district).toEqual(expectedState);
   });
 
-  // it('should invoke handleInput when the input value changes', () => {
-  //   // const mockInput = jest.fn()
-  //   const wrapper = mount(<SearchForm 
-  //                             updateDistricts={jest.fn()}/>)
-    
-  //   wrapper.find('input').simulate('keydown', {target: {value: 'abc'}})
-  //   expect(wrapper.updateDistricts()).toHaveBeenCalled()
-  // })
-
   it('should update state when handle input is invoked', () => {
     const wrapper = shallow(<SearchForm updateDistricts={jest.fn()}/>);
     const mockTyping = { target: {value: 'taco'}};

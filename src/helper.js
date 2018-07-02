@@ -39,8 +39,13 @@ export default class DistrictRepository {
   }
 
   findAverage = (district) => {
+    let statsVals;
     const distResults = this.findByName(district.toUpperCase());
-    const statsVals = Object.values(distResults[district]);
+    if (distResults[district.toUpperCase()]) {
+      statsVals = Object.values(distResults[district.toUpperCase()]); 
+    } else {
+      statsVals = Object.values(distResults[district]);
+    }
     const totalVal = statsVals.reduce((sum, num) => {
       return sum += num;
     }, 0);
